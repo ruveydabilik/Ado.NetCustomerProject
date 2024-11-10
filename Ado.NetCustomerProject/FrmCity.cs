@@ -95,6 +95,7 @@ namespace Ado.NetCustomerProject
             adapter.Fill(dataTable);
             dataGridView.DataSource = dataTable;
             sqlConnection.Close();
+            txtCityName.Text = "";
         }
     }
 }

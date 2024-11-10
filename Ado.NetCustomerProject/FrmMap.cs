@@ -28,5 +28,10 @@ namespace Ado.NetCustomerProject
             FrmCustomer frmCustomer = new FrmCustomer();
             frmCustomer.Show();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

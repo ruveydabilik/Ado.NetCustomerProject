@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.rbPassive = new System.Windows.Forms.RadioButton();
+            this.rbActive = new System.Windows.Forms.RadioButton();
+            this.cmbCity = new System.Windows.Forms.ComboBox();
+            this.txtBalance = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -41,13 +48,7 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.cmbCity = new System.Windows.Forms.ComboBox();
-            this.rbActive = new System.Windows.Forms.RadioButton();
-            this.rbPassive = new System.Windows.Forms.RadioButton();
+            this.btnProcedure = new System.Windows.Forms.Button();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.DarkSalmon;
+            this.MainPanel.Controls.Add(this.btnProcedure);
             this.MainPanel.Controls.Add(this.rbPassive);
             this.MainPanel.Controls.Add(this.rbActive);
             this.MainPanel.Controls.Add(this.cmbCity);
@@ -80,41 +82,112 @@
             this.MainPanel.TabIndex = 1;
             this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
+            // rbPassive
+            // 
+            this.rbPassive.AutoSize = true;
+            this.rbPassive.Location = new System.Drawing.Point(252, 234);
+            this.rbPassive.Name = "rbPassive";
+            this.rbPassive.Size = new System.Drawing.Size(58, 20);
+            this.rbPassive.TabIndex = 19;
+            this.rbPassive.TabStop = true;
+            this.rbPassive.Text = "Pasif";
+            this.rbPassive.UseVisualStyleBackColor = true;
+            // 
+            // rbActive
+            // 
+            this.rbActive.AutoSize = true;
+            this.rbActive.Location = new System.Drawing.Point(168, 234);
+            this.rbActive.Name = "rbActive";
+            this.rbActive.Size = new System.Drawing.Size(53, 20);
+            this.rbActive.TabIndex = 18;
+            this.rbActive.TabStop = true;
+            this.rbActive.Text = "Aktif";
+            this.rbActive.UseVisualStyleBackColor = true;
+            // 
+            // cmbCity
+            // 
+            this.cmbCity.FormattingEnabled = true;
+            this.cmbCity.Location = new System.Drawing.Point(145, 193);
+            this.cmbCity.Name = "cmbCity";
+            this.cmbCity.Size = new System.Drawing.Size(184, 24);
+            this.cmbCity.TabIndex = 17;
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Location = new System.Drawing.Point(145, 150);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(184, 22);
+            this.txtBalance.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(82, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Durum:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(90, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Şehir:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(78, 153);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Bakiye:";
+            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(274, 304);
+            this.btnSearch.Location = new System.Drawing.Point(250, 330);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(89, 44);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Ara";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(179, 330);
+            this.btnUpdate.Location = new System.Drawing.Point(250, 280);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(89, 44);
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(179, 280);
+            this.btnDelete.Location = new System.Drawing.Point(155, 280);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(89, 44);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(85, 330);
+            this.btnCreate.Location = new System.Drawing.Point(155, 330);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(89, 44);
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Ekle";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtCustomerSurname
             // 
@@ -152,7 +225,7 @@
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(84, 280);
+            this.btnList.Location = new System.Drawing.Point(60, 280);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(89, 44);
             this.btnList.TabIndex = 3;
@@ -188,72 +261,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Müşteri Id:";
             // 
-            // label4
+            // btnProcedure
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(82, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Durum:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(90, 196);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Şehir:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(78, 153);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Bakiye:";
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Location = new System.Drawing.Point(145, 150);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(184, 22);
-            this.txtBalance.TabIndex = 16;
-            // 
-            // cmbCity
-            // 
-            this.cmbCity.FormattingEnabled = true;
-            this.cmbCity.Location = new System.Drawing.Point(145, 193);
-            this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(184, 24);
-            this.cmbCity.TabIndex = 17;
-            // 
-            // rbActive
-            // 
-            this.rbActive.AutoSize = true;
-            this.rbActive.Location = new System.Drawing.Point(168, 234);
-            this.rbActive.Name = "rbActive";
-            this.rbActive.Size = new System.Drawing.Size(53, 20);
-            this.rbActive.TabIndex = 18;
-            this.rbActive.TabStop = true;
-            this.rbActive.Text = "Aktif";
-            this.rbActive.UseVisualStyleBackColor = true;
-            // 
-            // rbPassive
-            // 
-            this.rbPassive.AutoSize = true;
-            this.rbPassive.Location = new System.Drawing.Point(252, 234);
-            this.rbPassive.Name = "rbPassive";
-            this.rbPassive.Size = new System.Drawing.Size(58, 20);
-            this.rbPassive.TabIndex = 19;
-            this.rbPassive.TabStop = true;
-            this.rbPassive.Text = "Pasif";
-            this.rbPassive.UseVisualStyleBackColor = true;
+            this.btnProcedure.Location = new System.Drawing.Point(61, 330);
+            this.btnProcedure.Name = "btnProcedure";
+            this.btnProcedure.Size = new System.Drawing.Size(89, 44);
+            this.btnProcedure.TabIndex = 20;
+            this.btnProcedure.Text = "Prosedür";
+            this.btnProcedure.UseVisualStyleBackColor = true;
+            this.btnProcedure.Click += new System.EventHandler(this.btnProcedure_Click);
             // 
             // FrmCustomer
             // 
@@ -264,6 +280,7 @@
             this.Name = "FrmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Müşteri Formu";
+            this.Load += new System.EventHandler(this.FrmCustomer_Load);
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -293,5 +310,6 @@
         private System.Windows.Forms.ComboBox cmbCity;
         private System.Windows.Forms.RadioButton rbPassive;
         private System.Windows.Forms.RadioButton rbActive;
+        private System.Windows.Forms.Button btnProcedure;
     }
 }
