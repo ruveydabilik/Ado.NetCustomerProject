@@ -1,6 +1,6 @@
 ﻿namespace Ado.NetCustomerProject
 {
-    partial class Form1
+    partial class FrmCity
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCityName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnList = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.txtCityId = new System.Windows.Forms.TextBox();
@@ -57,7 +56,6 @@
             this.MainPanel.Controls.Add(this.label3);
             this.MainPanel.Controls.Add(this.txtCityName);
             this.MainPanel.Controls.Add(this.label2);
-            this.MainPanel.Controls.Add(this.radioButton1);
             this.MainPanel.Controls.Add(this.btnList);
             this.MainPanel.Controls.Add(this.dataGridView);
             this.MainPanel.Controls.Add(this.txtCityId);
@@ -69,12 +67,13 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(136, 295);
+            this.btnSearch.Location = new System.Drawing.Point(145, 294);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(117, 44);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Ara";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
@@ -84,6 +83,7 @@
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -93,6 +93,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCreate
             // 
@@ -138,18 +139,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Şehir Adı:";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(31, 15);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 20);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // btnList
             // 
             this.btnList.Location = new System.Drawing.Point(64, 173);
@@ -188,13 +177,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Şehir Id:";
             // 
-            // Form1
+            // FrmCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 426);
             this.Controls.Add(this.MainPanel);
-            this.Name = "Form1";
+            this.Name = "FrmCity";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Şehir Bilgi Formu";
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
@@ -209,7 +199,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.TextBox txtCityId;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.TextBox txtCityCountry;
         private System.Windows.Forms.Label label3;
