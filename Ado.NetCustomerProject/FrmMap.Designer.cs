@@ -37,7 +37,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnOpenCustomerForm);
             this.panel1.Controls.Add(this.btnOpenCityForm);
